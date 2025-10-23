@@ -1,0 +1,126 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+#game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  background-color: #333;
+  display: block;
+  border: 2px solid #555;
+}
+
+#ui-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+#game-over, #start-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  pointer-events: auto;
+}
+
+#game-over h1, #start-menu h1 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+}
+
+#restart-button, #start-button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#restart-button:hover, #start-button:hover {
+  background-color: #357abd;
+}
+
+.hidden {
+  display: none;
+}
+
+#mobile-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Container doesn't block clicks */
+  z-index: 10;
+}
+
+.control-button {
+  position: absolute;
+  bottom: 30px;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  pointer-events: auto; /* Buttons are clickable */
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* Safari */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-button:active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#left-button {
+  left: 30px;
+}
+
+#right-button {
+  left: 120px;
+}
+
+#jump-button {
+  right: 30px;
+}
